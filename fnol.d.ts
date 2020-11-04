@@ -1,6 +1,6 @@
 import { ServiceArea } from "./serviceAreas"
 
-export type FNOLEventName = "FNOLApproved" | "FNOLError"
+export type FNOLEventName = "FNOLApproved" | "FNOLError" | "unknown"
 
 export type FNOLEventData<T extends FNOLEventName> = T extends "FNOLApproved"
   ? { data: FNOLApprovedMessage }
