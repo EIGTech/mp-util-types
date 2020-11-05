@@ -1,3 +1,4 @@
+import { Policy } from "./policies"
 import { ServiceArea } from "./serviceAreas"
 
 export type FNOLEventName = "FNOLApproved" | "FNOLError" | "unknown"
