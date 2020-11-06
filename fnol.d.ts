@@ -84,7 +84,7 @@ export type FNOLSubmissionSuccessResponse = {
   success: true
   results: {
     claimNumber: string
-  }[]
+  }
 }
 
 export type FNOLSubmissionErrorResponse = {
