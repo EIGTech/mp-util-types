@@ -11,6 +11,7 @@ export type FNOLEventData<T extends FNOLEventName> = T extends "FNOLApproved"
 
 export type FNOLEvent<T extends FNOLEventName> = {
   eventName: FNOLEventName
+  eventTime: string
 } & FNOLEventData<T>
 
 export type FNOLCollectedAttributes = {
