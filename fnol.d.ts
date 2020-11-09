@@ -96,7 +96,7 @@ export type FNOLSubmissionErrorResponse = {
 export type FNOLApprovedMessage = {
   collectedAttributes: FNOLCollectedAttributes
   submittedPayload: FNOLSubmittedPayload
-  serviceAreas: ServiceArea[]
+  serviceArea: ServiceArea
   policy: Policy
   submissionResponse: FNOLSubmissionSuccessResponse
 }
@@ -104,7 +104,7 @@ export type FNOLApprovedMessage = {
 export type FNOLErrorMessage = {
   collectedAttributes: FNOLCollectedAttributes
   submittedPayload: FNOLSubmittedPayload
-  serviceAreas: ServiceArea[]
+  serviceArea: ServiceArea
   policy: Policy
   submissionResponse: FNOLSubmissionErrorResponse
 }
