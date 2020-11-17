@@ -18,9 +18,13 @@ import { FNOLEvent } from "mp-util-types"
 ```
 
 ## Contributing
+
 Pull requests are required to commit to `main`
 
+This project uses SemVer standards for versioning. To increment the version, from the CLI and with no active changes to the local git repo, run: `npm version [increment]` where `[increment]` is one of `major`, `minor`, or `patch`
+
 ### Branch structure
+
 * `main` - Checkin to master will trigger the CI/CD pipeline to execute. Only release candidates should be checked in to master. 
 * `stable` - Holds an active snapshot of production. This branch will be used for emergency roll-back should master get into production with unsatisfactory changes. `stable` branch will only accept pull requests from master after it has been validated in production.
 * `feature/*` - Feature branches will be created from master for each piece of work that is occuring on the project.
