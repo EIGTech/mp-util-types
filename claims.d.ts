@@ -1,3 +1,5 @@
+import { FNOLCollectedAttributes } from "./fnol"
+
 type Address = {
   line1: string
   line2?: string
@@ -50,7 +52,7 @@ type ClaimStatus = {
   updatedBy: BasicContact
 }
 
-export type Claim = {
+export interface Claim {
   claimNumber: string
   lossAddress: Address
   lossDate: string
@@ -65,4 +67,16 @@ export type Claim = {
   adjuster?: BasicContact
   fileExaminer?: BasicContact
   thirdPartyAdjuster?: BasicContact
+  fnol?: FNOLCollectedAttributes
+  claimSource: string
+}
+
+export interface RestorationManagerClaim extends Claim {
+  claimSource: "RESTORATION_MANAGER"
+  restorationStaffName: string
+  restorationSuperName: string
+  currentRestorationProgressId: number
+  currentProgressName: string
+  restorationInternalId: number
+  restorationJobId: string
 }
