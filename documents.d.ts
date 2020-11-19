@@ -12,3 +12,7 @@ export interface Document {
   visibilityGroup: "public" | "private"
   source: "INSIGHT" | "USER" | "RM"
 }
+
+export interface UserDocument extends Document {
+  source: "USER"
+}
