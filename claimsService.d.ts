@@ -1,3 +1,4 @@
+import { Claim } from "./claims";
 import { FNOLCollectedAttributes } from "./fnol";
 
 export interface SQSMessage {
@@ -9,7 +10,7 @@ export interface SQSMessage {
 export interface ClaimSQSMessage extends SQSMessage {
   method: "ADD" | "UPDATE"
   documentType: "CLAIM"
-  data: any
+  data: Claim
 }
 
 export interface FnolSQSMessage extends SQSMessage {
