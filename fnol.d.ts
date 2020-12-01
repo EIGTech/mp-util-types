@@ -108,3 +108,33 @@ export type FNOLErrorMessage = {
   policy: Policy
   submissionResponse: FNOLSubmissionErrorResponse
 }
+
+export type FNOLSubmission = {
+  isEmergency: boolean
+  policyNumber: string
+  lossType: string
+  lossDate: string
+  verifiedEmail: string
+  verifiedPhone: string
+  freeformDescription: string
+  damageDiscoveredDate: string
+  damagedPropertyArea: string[]
+  damageTypes: string[]
+  numberRoomsAffected: number
+  reportedBy: string
+  reportedByEmail: string
+  reportedByPhone: string
+  additionalNotes: string
+  standingWater: boolean | null
+  containmentLevel: string
+  exteriorDebrisDamage: boolean | null
+  dwellingHabitable: boolean | null
+  openToElements: boolean | null
+  eventName: string
+  claimantName: string
+  claimantPhone: string
+  claimantEmail: string
+  claimantRepresentationName: string
+  claimantRepresentationPhone: string
+  claimantRepresentationEmail: string
+}
