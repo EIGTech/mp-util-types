@@ -130,11 +130,11 @@ export type FNOLSubmission = {
   exteriorDebrisDamage: boolean | null
   dwellingHabitable: boolean | null
   openToElements: boolean | null
-  eventName: string
-  claimantName: string
-  claimantPhone: string
-  claimantEmail: string
-  claimantRepresentationName: string
-  claimantRepresentationPhone: string
-  claimantRepresentationEmail: string
+  eventName?: string
+  claimantName?: string
+  claimantPhone?: string
+  claimantEmail?: string
+  claimantRepresentationName?: string
+  claimantRepresentationPhone?: string
+  claimantRepresentationEmail?: string
 }
