@@ -22,25 +22,26 @@ export type FNOLCollectedAttributes = {
   verifiedEmail: string
   verifiedPhone: string
   freeformDescription: string
-  damagedPropertyAreas: string[]
+  damageDiscoveredDate: string
+  damagedPropertyArea: string[]
   damageTypes: string[]
-  numberRoomsAffected: string
+  numberRoomsAffected: number
   reportedBy: string
   reportedByEmail: string
   reportedByPhone: string
   additionalNotes: string
-  standingWater: boolean
+  standingWater: boolean | null
   containmentLevel: string
-  exteriorDebrisDamage: boolean
-  dwellingHabitable: boolean
-  openToElements: boolean
-  eventName: string
-  claimantName: string
-  claimantEmail: string
-  claimantPhone: string
-  claimantRepresentationName: string
-  claimantRepresentationEmail: string
-  claimantRepresentationPhone: string
+  exteriorDebrisDamage: boolean | null
+  dwellingHabitable: boolean | null
+  openToElements: boolean | null
+  eventName?: string
+  claimantName?: string
+  claimantPhone?: string
+  claimantEmail?: string
+  claimantRepresentationName?: string
+  claimantRepresentationPhone?: string
+  claimantRepresentationEmail?: string
 }
 
 export type FNOLSubmittedPayload = {
@@ -110,31 +111,7 @@ export type FNOLErrorMessage = {
 }
 
 export type FNOLSubmission = {
-  isEmergency: boolean
-  policyNumber: string
-  lossType: string
-  lossDate: string
-  verifiedEmail: string
-  verifiedPhone: string
-  freeformDescription: string
-  damageDiscoveredDate: string
-  damagedPropertyArea: string[]
-  damageTypes: string[]
-  numberRoomsAffected: number
-  reportedBy: string
-  reportedByEmail: string
-  reportedByPhone: string
-  additionalNotes: string
-  standingWater: boolean | null
-  containmentLevel: string
-  exteriorDebrisDamage: boolean | null
-  dwellingHabitable: boolean | null
-  openToElements: boolean | null
-  eventName?: string
-  claimantName?: string
-  claimantPhone?: string
-  claimantEmail?: string
-  claimantRepresentationName?: string
-  claimantRepresentationPhone?: string
-  claimantRepresentationEmail?: string
+  collectedAttributes: FNOLCollectedAttributes
+  serviceArea: ServiceArea
+  policy: Policy
 }
