@@ -83,15 +83,21 @@ export type FNOLSubmittedPayload = {
 }
 
 export type FNOLSubmissionSuccessResponse = {
-  success: true
-  results: {
-    claimNumber: string
+  submissionPayload: FNOLSubmittedPayload
+  submissionResponse: {
+    success: true
+    results: {
+      claimNumber: string
+    }
   }
 }
 
 export type FNOLSubmissionErrorResponse = {
-  success: false
-  errorMessage: string
+  submissionPayload: FNOLSubmittedPayload
+  submissionResponse: {
+    success: false
+    errorMessage: string
+  }
 }
 
 export type FNOLApprovedMessage = {
@@ -99,7 +105,12 @@ export type FNOLApprovedMessage = {
   submittedPayload: FNOLSubmittedPayload
   serviceArea: ServiceArea | undefined
   policy: Policy
-  submissionResponse: FNOLSubmissionSuccessResponse
+  submissionResponse: {
+    success: true
+    results: {
+      claimNumber: string
+    }
+  }
 }
 
 export type FNOLErrorMessage = {
@@ -107,7 +118,10 @@ export type FNOLErrorMessage = {
   submittedPayload: FNOLSubmittedPayload
   serviceArea: ServiceArea | undefined
   policy: Policy
-  submissionResponse: FNOLSubmissionErrorResponse
+  submissionResponse: {
+    success: false
+    errorMessage: string
+  }
 }
 
 export type FNOLSubmission = {
