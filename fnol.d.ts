@@ -86,7 +86,7 @@ export type FNOLSubmissionSuccessResponse = {
       claimNumber: string
       isDuplicate: boolean
       isPriority: boolean
-      priorityReason: string
+      priorityReason?: string
     }
   }
 }
