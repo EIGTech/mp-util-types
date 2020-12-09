@@ -76,7 +76,6 @@ export type FNOLSubmittedPayload = {
   phone1Type:string 
   willEIGHandle:boolean
   isEmergency:boolean
-  otrEligible:boolean
 }
 
 export type FNOLSubmissionSuccessResponse = {
