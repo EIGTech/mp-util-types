@@ -129,3 +129,8 @@ export type FNOLSubmission = {
   serviceArea: ServiceArea | undefined
   policy: Policy
 }
+
+export type InvokeFnolResponse = {
+  success: boolean
+  payload: FNOLSubmissionSuccessResponse | FNOLSubmissionErrorResponse
+}
