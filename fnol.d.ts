@@ -84,6 +84,9 @@ export type FNOLSubmissionSuccessResponse = {
     success: true
     results: {
       claimNumber: string
+      isDuplicate: boolean
+      isPriority: boolean
+      priorityReason: string
     }
   }
 }
@@ -98,30 +101,15 @@ export type FNOLSubmissionErrorResponse = {
 
 export type FNOLApprovedMessage = {
   collectedAttributes: FNOLCollectedAttributes
-  submittedPayload: FNOLSubmittedPayload
   serviceArea: ServiceArea | undefined
   policy: Policy
-  submissionResponse: {
-    success: true
-    results: {
-      claimNumber: string
-      isDuplicate: boolean
-      isPriority: boolean
-      priorityReason: string
-    }
-  }
-}
+} & FNOLSubmissionSuccessResponse
 
 export type FNOLErrorMessage = {
   collectedAttributes: FNOLCollectedAttributes
-  submittedPayload: FNOLSubmittedPayload
   serviceArea: ServiceArea | undefined
   policy: Policy
-  submissionResponse: {
-    success: false
-    errorMessage: string
-  }
-}
+} & FNOLSubmissionErrorResponse
 
 export type FNOLSubmission = {
   collectedAttributes: FNOLCollectedAttributes
