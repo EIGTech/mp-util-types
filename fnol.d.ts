@@ -76,9 +76,6 @@ export type FNOLSubmittedPayload = {
   phone1Type:string 
   willEIGHandle:boolean
   isEmergency:boolean
-  claimNumber:string 
-  isDuplicateClaim:boolean
-  eventName:string 
   otrEligible:boolean
 }
 
