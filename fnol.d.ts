@@ -79,7 +79,7 @@ export type FNOLSubmittedPayload = {
 }
 
 export type FNOLSubmissionSuccessResponse = {
-  submissionPayload: FNOLSubmittedPayload
+  submittedPayload: FNOLSubmittedPayload
   submissionResponse: {
     success: true
     results: {
@@ -92,7 +92,7 @@ export type FNOLSubmissionSuccessResponse = {
 }
 
 export type FNOLSubmissionErrorResponse = {
-  submissionPayload: FNOLSubmittedPayload
+  submittedPayload: FNOLSubmittedPayload
   submissionResponse: {
     success: false
     errorMessage: string
