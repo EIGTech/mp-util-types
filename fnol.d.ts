@@ -106,6 +106,9 @@ export type FNOLApprovedMessage = {
     success: true
     results: {
       claimNumber: string
+      isDuplicate: boolean
+      isPriority: boolean
+      priorityReason: string
     }
   }
 }
