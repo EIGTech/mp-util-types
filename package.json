@@ -1,6 +1,6 @@
 {
   "name": "mp-util-types",
-  "version": "1.6.4",
+  "version": "1.7.0",
   "description": "Typings for Mapping Platform",
   "main": "index.d.ts",
   "scripts": {
