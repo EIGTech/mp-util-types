@@ -22,7 +22,6 @@ export type FNOLCollectedAttributes = {
   verifiedEmail: string
   verifiedPhone: string
   freeformDescription: string
-  damageDiscoveredDate: string
   damagedPropertyArea: string[]
   damageTypes: string[]
   numberRoomsAffected: number
