@@ -105,19 +105,19 @@ export type FNOLSubmissionErrorResponse = {
 
 export type FNOLApprovedMessage = {
   collectedAttributes: FNOLCollectedAttributes
-  serviceArea: ServiceArea | undefined
+  suggestedAssignment?: ServiceArea
   policy: Policy
 } & FNOLSubmissionSuccessResponse
 
 export type FNOLErrorMessage = {
   collectedAttributes: FNOLCollectedAttributes
-  serviceArea: ServiceArea | undefined
+  suggestedAssignment?: ServiceArea
   policy: Policy
 } & FNOLSubmissionErrorResponse
 
 export type FNOLSubmission = {
   collectedAttributes: FNOLCollectedAttributes
-  serviceArea: ServiceArea | undefined
+  suggestedAssignment?: ServiceArea
   policy: Policy
 }
 
@@ -125,3 +125,12 @@ export type InvokeFnolResponse = {
   success: boolean
   payload: FNOLSubmissionSuccessResponse | FNOLSubmissionErrorResponse
 }
+
+export type SubmitFnolRequest = FNOLCollectedAttributes
+
+export type SubmitFnolResponse = 
+  FNOLSubmissionSuccessResponse["submissionResponse"]["results"] & {
+    suggestedAssignment?: ServiceArea
+    error: boolean,
+    errorMessage?: string 
+  }
