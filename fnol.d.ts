@@ -118,6 +118,7 @@ export type FNOLErrorMessage = {
 export type FNOLSubmission = {
   collectedAttributes: FNOLCollectedAttributes
   suggestedAssignment?: ServiceArea
+  hasPotentialCoverageIssue: boolean
   policy: Policy
 }
 
