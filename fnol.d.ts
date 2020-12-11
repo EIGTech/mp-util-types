@@ -128,12 +128,8 @@ export type InvokeFnolResponse = {
 
 export type SubmitFnolRequest = FNOLCollectedAttributes
 
-export type SubmitFnolResponse = 
-{
-  error: true,
-  errorMessage: string
-} | (FNOLSubmissionSuccessResponse["submissionResponse"]["results"] & {
-    suggestedAssignment?: ServiceArea
-    error: boolean,
-    errorMessage?: string 
-  })
+export type SubmitFnolResponse = Partial<FNOLSubmissionSuccessResponse["submissionResponse"]["results"] & {
+  suggestedAssignment?: ServiceArea
+  error: boolean,
+  errorMessage?: string 
+}>
