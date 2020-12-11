@@ -130,6 +130,7 @@ export type SubmitFnolRequest = FNOLCollectedAttributes
 
 export type SubmitFnolResponse = Partial<FNOLSubmissionSuccessResponse["submissionResponse"]["results"] & {
   suggestedAssignment?: ServiceArea
+  hasPotentialCoverageIssue?: boolean
   error: boolean,
   errorMessage?: string 
 }>
