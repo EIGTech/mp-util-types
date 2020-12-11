@@ -88,6 +88,9 @@ export type FNOLSubmissionSuccessResponse = {
       isDuplicate: boolean
       isPriority: boolean
       priorityReason?: string
+      additionalProperties?: {
+        [index: string]: any //An explicit any here is okay, it just puts the ball in the handler's court to understand what these properties might be
+      }
     }
   }
 }
