@@ -135,3 +135,10 @@ export type SubmitFnolResponse = Partial<FNOLSubmissionSuccessResponse["submissi
   error: boolean,
   errorMessage?: string 
 }>
+
+export type FnolNote = {
+  note: string
+  reportedBy: string
+  policyNumber: string
+  claimNumber: string
+}
