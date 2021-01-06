@@ -6,5 +6,6 @@ export * from "./claims"
 export * from "./documents"
 export * from "./restorationManager"
 export * from "./util"
+export * from "./catEvent"
 
 export as namespace MappingPlatform
