@@ -1,5 +1,4 @@
 import { FNOLCollectedAttributes } from "./fnol"
-import { LossType } from "./loss"
 
 type Address = {
   line1: string
@@ -16,6 +15,25 @@ type BasicContact = {
   email?: string
   phone?: string
 }
+
+export type LossType = "Hurricane" |
+  "Fire" |
+  "Flood" |
+  "Water" |
+  "Wind" |
+  "Lightning" |
+  "Hail" |
+  "LiabilityInjuryPhysicalDamage" |
+  "Sinkhole" |
+  "Vandalism" |
+  "Theft" |
+  "Other" |
+  "LossAssessment" |
+  "LiabilityAnimal" |
+  "LiabilityLead" |
+  "CausedByAnimal" |
+  "PersonalInjuryProtection" |
+  "MedicalPayments"
 
 type PrimaryContactOptionals = "fullName" | "id" | "email" | "phone"
 

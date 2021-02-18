@@ -1,4 +1,4 @@
-import { LossType } from "./loss"
+import { LossType } from "./claims"
 
 export type Location = {
   state?: string
