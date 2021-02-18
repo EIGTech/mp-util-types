@@ -1,6 +1,6 @@
 {
   "name": "@eigtech/mp-util-types",
-  "version": "2.3.0",
+  "version": "2.3.1",
   "description": "Typings for Mapping Platform",
   "main": "index.d.ts",
   "types": "index.d.ts",
