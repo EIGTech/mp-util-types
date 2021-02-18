@@ -1,9 +1,12 @@
 {
-  "name": "mp-util-types",
+  "name": "@eigtech/mp-util-types",
   "version": "2.3.0",
   "description": "Typings for Mapping Platform",
   "main": "index.d.ts",
+  "types": "index.d.ts",
   "scripts": {
+    "co:login": "aws codeartifact login --tool npm --repository eigtech --domain eigtech --domain-owner 306904067332 --namespace @eigtech",
+    "prepare": "npm run co:login",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -11,7 +14,6 @@
     "url": "git+https://github.com/EIGTech/mp-util-types.git"
   },
   "author": "",
-  "types": "index.d.ts",
   "bugs": {
     "url": "https://github.com/EIGTech/mp-util-types/issues"
   },
