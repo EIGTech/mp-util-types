@@ -16,17 +16,7 @@ type BasicContact = {
   phone?: string
 }
 
-type PrimaryContactOptionals = "fullName" | "id" | "email" | "phone"
-
-type PrimaryContact = { [P in PrimaryContactOptionals]?: BasicContact[P] | null } &
-  Omit<BasicContact, PrimaryContactOptionals> & 
-  {
-    firstName: string
-    lastName: string
-    phoneType: string | null
-  }
-  
-type LossType = "Hurricane" |
+export type LossType = "Hurricane" |
   "Fire" |
   "Flood" |
   "Water" |
@@ -44,6 +34,16 @@ type LossType = "Hurricane" |
   "CausedByAnimal" |
   "PersonalInjuryProtection" |
   "MedicalPayments"
+
+type PrimaryContactOptionals = "fullName" | "id" | "email" | "phone"
+
+type PrimaryContact = { [P in PrimaryContactOptionals]?: BasicContact[P] | null } &
+  Omit<BasicContact, PrimaryContactOptionals> &
+  {
+    firstName: string
+    lastName: string
+    phoneType: string | null
+  }
 
 type ClaimStatus = {
   statusName: string
