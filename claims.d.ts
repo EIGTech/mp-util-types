@@ -1,4 +1,5 @@
 import { FNOLCollectedAttributes } from "./fnol"
+import { LossType } from "./loss"
 
 type Address = {
   line1: string
@@ -19,31 +20,12 @@ type BasicContact = {
 type PrimaryContactOptionals = "fullName" | "id" | "email" | "phone"
 
 type PrimaryContact = { [P in PrimaryContactOptionals]?: BasicContact[P] | null } &
-  Omit<BasicContact, PrimaryContactOptionals> & 
+  Omit<BasicContact, PrimaryContactOptionals> &
   {
     firstName: string
     lastName: string
     phoneType: string | null
   }
-  
-type LossType = "Hurricane" |
-  "Fire" |
-  "Flood" |
-  "Water" |
-  "Wind" |
-  "Lightning" |
-  "Hail" |
-  "LiabilityInjuryPhysicalDamage" |
-  "Sinkhole" |
-  "Vandalism" |
-  "Theft" |
-  "Other" |
-  "LossAssessment" |
-  "LiabilityAnimal" |
-  "LiabilityLead" |
-  "CausedByAnimal" |
-  "PersonalInjuryProtection" |
-  "MedicalPayments"
 
 type ClaimStatus = {
   statusName: string

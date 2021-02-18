@@ -1,10 +1,12 @@
-export * from "./fnol"
-export * from "./serviceAreas"
-export * from "./policies"
-export * from "./claimsService"
+export * from "./catEvent"
 export * from "./claims"
+export * from "./claimsService"
 export * from "./documents"
+export * from "./fnol"
+export * from "./loss"
+export * from "./policies"
 export * from "./restorationManager"
+export * from "./serviceAreas"
 export * from "./util"
 
 export as namespace MappingPlatform
