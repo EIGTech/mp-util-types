@@ -43,6 +43,8 @@ export type FNOLCollectedAttributes = {
   claimantRepresentationPhone?: string
   claimantRepresentationEmail?: string
   imageTransferId: string
+  chatbotUserFirstName?: string
+  chatbotUserLastName?: string
 }
 
 export type FNOLSubmittedPayload = {
