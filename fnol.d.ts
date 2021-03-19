@@ -79,8 +79,6 @@ export type FNOLSubmittedPayload = {
   phone1Type:string 
   willEIGHandle:boolean
   isEmergency:boolean
-  chatbotUserFirstName?: string
-  chatbotUserLastName?: string
 }
 
 export type FNOLSubmissionSuccessResponse = {
