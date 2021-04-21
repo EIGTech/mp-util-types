@@ -67,18 +67,31 @@ type Kpi = {
 }
 type KpiName = keyof RMKPIHistory
 
+export type GanttStatus = {
+  statusName: string
+  statusId: string
+  startDate: string
+  updateDate: string
+  updatedBy: {
+    fullName: string
+    id: string
+    email?: string
+    phone?: string
+  }
+}
+
 export type RMClaim = {
   currentProgressKPIStatus: KpiLevel
   coverages:
-    | (
-        | {
-            coverageType: string
-            policyLimit: string
-            deductable: string
-          }
-        | undefined
-      )[]
+  | (
+    | {
+      coverageType: string
+      policyLimit: string
+      deductable: string
+    }
     | undefined
+  )[]
+  | undefined
   lossDescription: string | undefined
   kpiHistory: Kpi[]
   status: "Active"
@@ -116,15 +129,5 @@ export type RMClaim = {
   overallDeductable?: string
   policyInception?: string
   policyEnd?: string,
-  ganttStatus?: {
-    statusName: string
-    statusId: string
-    updateDate: string
-    updatedBy: {
-      fullName: string
-      id: string
-      email?: string
-      phone?: string
-    }
-  }[]
+  ganttStatus?: GanttStatus[]
 }
