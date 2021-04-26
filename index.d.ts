@@ -7,5 +7,6 @@ export * from "./policies"
 export * from "./restorationManager"
 export * from "./serviceAreas"
 export * from "./util"
+export * from "./vendors"
 
 export as namespace MappingPlatform
