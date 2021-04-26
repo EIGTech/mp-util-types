@@ -1,9 +1,10 @@
 import { FNOLCollectedAttributes } from "./fnol"
 
 export type Vendor = {
-  id?: string
+  id: string
   deleted?: boolean
-  name?: string
+  name: string
+  vendorCode: string
   website?: string
   displayEmail?: string
   notificationEmail?: string
