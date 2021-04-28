@@ -1,18 +1,24 @@
 import { FNOLCollectedAttributes } from "./fnol"
 
-export type Vendor = {
-  id: string
-  deleted?: boolean
-  name: string
-  vendorCode: string
-  website?: string
-  displayEmail?: string
-  notificationEmail?: string
-  displayPhone?: string
-  notificationPhone?: string
-  additionalProperties?: AdditionalProperties
-  handles?: HandlerOptions<FnolFilters>[]
-}
+export type VendorAttributes = {
+    name: string
+    vendorCode: string
+    website?: string
+    displayEmail?: string
+    notificationEmail?: string
+    displayPhone?: string
+    notificationPhone?: string
+    additionalProperties?: AdditionalProperties
+    handles?: HandlerOptions<FnolFilters>[]
+  }
+  
+  export type Vendor = VendorAttributes & {
+    id: string
+  }
+  
+  export type DbVendor = Vendor & {
+    deleted?: boolean
+  }
 
 // the object being filtered needs to be flat in order to maintain property typesafety.
 // just pulling out a subset of the policy object for now.
