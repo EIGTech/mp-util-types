@@ -7,7 +7,7 @@ export type VendorAttributes = {
     notificationEmail?: string
     displayPhone?: string
     notificationPhone?: string
-    additionalProperties?: AdditionalProperties
+    additionalProperties?: AdditionalProperties[]
     handles?: HandlerOptions<FnolFilters>[]
   }
   
@@ -26,7 +26,8 @@ export type FnolFilters = FNOLCollectedAttributes & {
 }
 
 export type AdditionalProperties = {
-  [key: string]: any
+  key: string
+  value: string | number
 }
 
 export type HandlerType = "Mitigation" | "Assignment"
