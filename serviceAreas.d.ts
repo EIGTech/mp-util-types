@@ -10,4 +10,5 @@ export type ServiceArea = {
   primaryContactPhone:string 
   primaryContactEmail:string 
   contactEmails:string[]
+  id: string
 }
