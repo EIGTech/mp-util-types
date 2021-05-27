@@ -4,7 +4,7 @@ export type VendorAttributes = {
     name: string
     website?: string
     displayEmail?: string
-    notificationEmail?: string
+    notificationEmail: string
     displayPhone?: string
     notificationPhone?: string
     additionalProperties?: AdditionalProperties[]
