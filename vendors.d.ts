@@ -35,6 +35,10 @@ export type HandlerOptions<T extends {}> = {
   type: HandlerType
   conditions: Filter<T>
 }
+export type StaticOperators<A> = {
+  kind: "Always";
+  field: keyof A;
+};
 
 export type ComparisonOperators<A> = {
   kind: "Equals" | "Greater" | "Less" | "Contains"
@@ -48,4 +52,4 @@ export type LogicalOperators<A> = {
   b: Filter<A>
 }
 
-export type Filter<A> = ComparisonOperators<A> | LogicalOperators<A>
+export type Filter<A> = ComparisonOperators<A> | LogicalOperators<A> | StaticOperators<A>
