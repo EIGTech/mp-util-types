@@ -7,7 +7,7 @@ export type VendorAttributes = {
     notificationEmail: string
     displayPhone?: string
     notificationPhone?: string
-    enabled: boolean
+    disabled: boolean
     additionalProperties?: AdditionalProperties[]
     handles?: HandlerOptions<FnolFilters>[]
   }
