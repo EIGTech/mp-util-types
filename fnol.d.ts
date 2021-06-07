@@ -45,6 +45,10 @@ export type FNOLCollectedAttributes = {
   imageTransferId: string
   chatbotUserFirstName?: string
   chatbotUserLastName?: string
+  roofDamageVisible?: boolean
+  roofBreached?: boolean
+  waterThroughRoof?: boolean
+  reasonHomeNotHabitable?: "evacuation" | "unusable" | "not secure" | "personal choice"
 }
 
 export type FNOLSubmittedPayload = {
