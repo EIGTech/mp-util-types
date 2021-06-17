@@ -11,4 +11,5 @@ export type ServiceArea = {
   primaryContactEmail:string 
   contactEmails:string[]
   id: string
+  assignToEig: boolean
 }
