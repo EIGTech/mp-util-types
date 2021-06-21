@@ -32,7 +32,7 @@ export type Policy = {
   debitDate: string
   effectiveDate: string
   email: string
-  emergencyServicesOptIn: boolean
+  emergencyServicesOptIn: boolean | null
   expirationDate: string
   inForce: boolean
   lastPaymentAmount: string
