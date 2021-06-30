@@ -1,3 +1,6 @@
+/**
+ * @deprecated Use the new mapping-platform-policies service types `npm i @eigtech/policies` {@link https://github.com/EIGTech/mapping-platform-policies}
+ */
 export type Policy = {
   agencyCode: string
   agencyName: string
